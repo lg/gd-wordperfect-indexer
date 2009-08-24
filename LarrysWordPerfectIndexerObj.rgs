@@ -1,0 +1,27 @@
+HKCR
+{
+	LarrysWordPerfectIndexer.LarrysWordPe.1 = s 'LarrysWordPerfectIndexerObj Class'
+	{
+		CLSID = s '{46639DB8-8C77-4942-80F2-688EB47AD2F2}'
+	}
+	LarrysWordPerfectIndexer.LarrysWordPerf = s 'LarrysWordPerfectIndexerObj Class'
+	{
+		CLSID = s '{46639DB8-8C77-4942-80F2-688EB47AD2F2}'
+		CurVer = s 'LarrysWordPerfectIndexer.LarrysWordPe.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {46639DB8-8C77-4942-80F2-688EB47AD2F2} = s 'LarrysWordPerfectIndexerObj Class'
+		{
+			ProgID = s 'LarrysWordPerfectIndexer.LarrysWordPe.1'
+			VersionIndependentProgID = s 'LarrysWordPerfectIndexer.LarrysWordPerf'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Both'
+			}
+			val AppID = s '%APPID%'
+			'TypeLib' = s '{BC0E3CEA-5728-4F22-B593-BBA05667C2A4}'
+		}
+	}
+}

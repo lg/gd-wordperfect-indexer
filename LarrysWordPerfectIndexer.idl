@@ -1,0 +1,37 @@
+// LarrysWordPerfectIndexer.idl : IDL source for LarrysWordPerfectIndexer
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (LarrysWordPerfectIndexer.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(43555F98-913B-4E11-9C97-2EF126486CEC),
+	dual,
+	nonextensible,
+	helpstring("ILarrysWordPerfectIndexerObj Interface"),
+	pointer_default(unique)
+]
+interface ILarrysWordPerfectIndexerObj : IDispatch{
+	[id(1), helpstring("method HandleFile")] HRESULT HandleFile(BSTR RawFilename, IDispatch* EventFactory);
+};
+[
+	uuid(BC0E3CEA-5728-4F22-B593-BBA05667C2A4),
+	version(1.0),
+	helpstring("LarrysWordPerfectIndexer 1.0 Type Library")
+]
+library LarrysWordPerfectIndexerLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(46639DB8-8C77-4942-80F2-688EB47AD2F2),
+		helpstring("LarrysWordPerfectIndexerObj Class")
+	]
+	coclass LarrysWordPerfectIndexerObj
+	{
+		[default] interface ILarrysWordPerfectIndexerObj;
+	};
+};
